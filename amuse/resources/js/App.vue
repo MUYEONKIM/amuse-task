@@ -1,9 +1,13 @@
 <template>
-    <div class="h-auto">
-        <pageHeader :color="headerColor" :fontColor="fontColor" />
+    <div class="h-auto font-PretendMedium">
+        <pageHeader
+            :color="headerColor"
+            :fontColor="fontColor"
+            class="relative z-50"
+        />
         <router-view></router-view>
+        <pageFooter v-if="footerVisible" />
     </div>
-    <pageFooter v-if="footerVisible" />
 </template>
 <script>
 import pageHeader from "./layout/pageHerader.vue";
