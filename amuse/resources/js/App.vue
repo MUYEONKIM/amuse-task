@@ -1,23 +1,26 @@
 <template>
-    <div class="h-auto font-PretendMedium">
+    <div class="h-auto font-PretendRegular">
         <pageHeader
             :color="headerColor"
             :fontColor="fontColor"
             class="relative z-50"
         />
+        <pageNavbar />
         <router-view></router-view>
         <pageFooter v-if="footerVisible" />
     </div>
 </template>
 <script>
-import pageHeader from "./layout/pageHerader.vue";
+import pageHeader from "./layout/pageHeader.vue";
 import pageFooter from "./layout/pageFooter.vue";
+import pageNavbar from "./layout/pageNavbar.vue";
 
 export default {
     name: "app",
     components: {
         pageHeader,
         pageFooter,
+        pageNavbar,
     },
     data() {
         return {

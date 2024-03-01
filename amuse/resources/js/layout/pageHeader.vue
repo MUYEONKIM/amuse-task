@@ -1,6 +1,6 @@
 <template>
     <div
-        class="flex items-center h-20 font-[20px]"
+        class="flex items-center h-20 text-[20px] font-PretendSemiBold"
         :class="{
             'bg-black': color === 'main',
             'bg-white': color === 'notMain',
@@ -14,7 +14,7 @@
     </div>
 </template>
 <script>
-import logoIcon from "../assets/logo.vue";
+import logoIcon from "../assets/svg/logo.vue";
 
 export default {
     methods: {

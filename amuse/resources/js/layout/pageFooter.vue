@@ -18,7 +18,7 @@
     </div>
 </template>
 <script>
-import logoIcon from "../assets/logo.vue";
+import logoIcon from "../assets/svg/logo.vue";
 
 export default {
     components: {
