@@ -8,7 +8,17 @@
             'text-black': fontColor === 'notMain',
         }"
     >
-        <Logo @click="goHome" class="ml-[13.02vw] cursor-pointer" />
+        <logoIcon
+            @click="goHome"
+            class="ml-[13.02vw] cursor-pointer"
+            v-if="$route.path === '/'"
+            :logoColor="`#EDEDED`"
+            :ftdotColor="`#EDEDED`"
+            :sqaureColor="`#BCBCBC`"
+            :messageColor="`#E8E8E8`"
+            :dotColor="`#F9FBFF`"
+        />
+        <logoIcon @click="goHome" class="ml-[13.02vw] cursor-pointer" v-else />
         <router-link class="ml-[265.65px]" to="/message">메시지</router-link>
         <router-link class="ml-[136.9px]" to="/credit">크레딧</router-link>
     </div>
@@ -23,7 +33,7 @@ export default {
         },
     },
     components: {
-        Logo: logoIcon,
+        logoIcon,
     },
     props: {
         color: {

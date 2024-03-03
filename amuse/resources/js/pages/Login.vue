@@ -5,6 +5,7 @@
             <div class="w-full text-[22px] mt-[69px] relative">
                 <input
                     placeholder="아이디를 입력해주세요"
+                    v-model="userId"
                     class="mt-[14px] w-full h-[61px] pl-[53px] pt-5 pb-5 text-[18px]"
                 />
                 <div
@@ -16,6 +17,8 @@
             <div class="w-full text-[22px] mt-[24px] relative">
                 <input
                     placeholder="비밀번호(영문, 숫자, 특수문자 포함 8~30자)"
+                    type="password"
+                    v-model="userPassword"
                     class="mt-[14px] w-full h-[61px] pl-[53px] pt-5 pb-5 text-[18px]"
                 />
                 <div
@@ -27,7 +30,7 @@
             <div
                 class="w-full flex justify-between items-center text-[18px] mt-[58px]"
             >
-                <div class="flex items-center" @click="isChecked">
+                <div class="flex items-center" @click.prevent="isChecked">
                     <noCheck v-if="!isCheck" />
                     <check v-if="isCheck" />
                     <p class="ml-[12px]">아이디 저장</p>
@@ -38,6 +41,7 @@
             </div>
             <button
                 class="w-full h-[66px] mt-[64px] bg-[#4F44F0] text-white text-center text-[22px] rounded-[8px]"
+                @click="loginSubmit"
             >
                 로그인
             </button>
@@ -53,30 +57,49 @@
     </div>
 </template>
 <script>
-import Logo from "../assets/svg/logo.vue";
-import check from "../assets/svg/check.vue";
-import noCheck from "../assets/svg/noCheck.vue";
-import id from "../assets/svg/id.vue";
-import pw from "../assets/svg/pw.vue";
+import axios from "axios";
+import { check, noCheck, id, logo, pw } from "../assets";
 
 export default {
     data() {
         return {
             isCheck: false,
+            userId: null,
+            userPassword: null,
         };
     },
     methods: {
         isChecked() {
             this.isCheck = !this.isCheck;
-            console.log(this.isCheck);
+        },
+        loginSubmit: async function () {
+            let loginData = {};
+            loginData.email = this.userId;
+            loginData.password = this.userPassword;
+
+            const result = await axios.post(
+                "http://localhost:8000/api/login",
+                JSON.stringify(loginData),
+                {
+                    headers: {
+                        "Content-Type": `application/json`,
+                    },
+                }
+            );
+            if (result.data.status) {
+                alert(result.data.message);
+                this.$router.push("/");
+                return;
+            }
+            alert(result.data.message);
         },
     },
     components: {
-        Logo: Logo,
-        check: check,
-        noCheck: noCheck,
-        id: id,
-        pw: pw,
+        logo,
+        check,
+        noCheck,
+        id,
+        pw,
     },
 };
 </script>

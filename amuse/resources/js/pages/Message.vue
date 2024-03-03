@@ -1,7 +1,8 @@
 <template>
-    <div class="w-full h-[2466px] bg-[#F2F4F8] flex justify-center">
+    <pageNavbar />
+    <div class="w-full bg-[#F2F4F8] flex justify-center">
         <div
-            class="w-[1223px] h-[2212px] mt-[56px] rounded-[24px] bg-white flex justify-center"
+            class="w-[1223px] mt-[56px] mb-[200px] rounded-[24px] bg-white flex justify-center"
         >
             <div class="w-[1031px] flex flex-col">
                 <p
@@ -128,6 +129,7 @@
                         >
                             <div class="w-[513px] mt-[24px] pb-[24px]">
                                 <input
+                                    v-model="title"
                                     class="w-full h-[61px] border-[1px] border-[#CECECE] pl-[20px] rounded-[8px] text-[18px]"
                                     placeholder="제목을 입력해주세요. (단문 SMS는 제외, 최대 30byte) "
                                 />
@@ -155,21 +157,32 @@
                                         />
                                     </div>
                                 </div>
-                                <textarea
-                                    class="w-full h-[295px] border-[1px] border-[#CECECE] mt-[16px] pl-[20px] pt-[20px] ptrounded-[8px] text-[18px] rounded-[8px] resize-none"
-                                    placeholder="내용을 입력해 주세요. 90byte 초과 시 장문 문자로,&#13;&#10;이미지 추가 시 포토 문자로 자동 전환 됩니다."
-                                ></textarea>
-                                <!-- <div>
-                                        <button class="absolute left-0 top-0">
-                                            qwe
+                                <div class="relative h-[295px] pb-[4px]">
+                                    <textarea
+                                        v-model="content"
+                                        class="w-full h-[295px] border-[1px] border-[#CECECE] mt-[16px] pt-[20px] pl-[20px] text-[18px] rounded-[8px] resize-none"
+                                        placeholder="내용을 입력해 주세요. 90byte 초과 시 장문 문자로,&#13;&#10;이미지 추가 시 포토 문자로 자동 전환 됩니다."
+                                    ></textarea>
+                                    <div
+                                        class="absolute bottom-0 right-[16.5px] flex w-[345px] justify-between"
+                                    >
+                                        <button
+                                            class="w-[107px] h-[43px] text-[#646464] rounded-[22px] bg-[#F5F5F5] text-[16px]"
+                                        >
+                                            치환코드
                                         </button>
-                                        <button class="absolute left-0 top-0">
-                                            qwe
+                                        <button
+                                            class="w-[107px] h-[43px] text-[#646464] rounded-[22px] bg-[#F5F5F5] text-[16px]"
+                                        >
+                                            템플릿
                                         </button>
-                                        <button class="absolute left-0 top-0">
-                                            qwe
+                                        <button
+                                            class="w-[107px] h-[43px] text-[#646464] rounded-[22px] bg-[#F5F5F5] text-[16px]"
+                                        >
+                                            문자도구
                                         </button>
-                                    </div> -->
+                                    </div>
+                                </div>
                                 <hr
                                     class="w-full border-[1px] border-[#707070] opacity-30 mt-[32px] mb-[32px]"
                                 />
@@ -222,25 +235,76 @@
                     </p>
                     <div class="flex mt-[16px]">
                         <button
-                            class="w-[274px] h-[66px] rounded-[8px] bg-[#F2F5F9] text-[#747B84] text-center"
+                            class="w-[274px] h-[66px] rounded-[8px] text-[22px] bg-[white] border-[2px] border-[#4F44F0] text-[#4F44F0] text-center"
                         >
-                            <div class="flex">
-                                <img src="../assets/icon/graycheck.png" />
+                            <div class="flex items-center justify-center">
+                                <img src="../assets/icon/bluecheck.png" />
                                 <p>즉시 발송</p>
                             </div>
                         </button>
                         <button
-                            class="w-[274px] h-[66px] rounded-[8px] bg-[#F2F5F9] text-[#747B84] text-center ml-[15px]"
+                            class="w-[274px] h-[66px] rounded-[8px] text-[22px] bg-[#F2F5F9] focus:bg-[white] focus:border-[2px] focus:border-[#4F44F0] focus:text-[#4F44F0] text-[#747B84] text-center ml-[15px]"
                         >
-                            <img src="../assets/icon/graycheck.png" />
-
-                            예약
+                            <div class="flex items-center justify-center">
+                                <img src="../assets/icon/graycheck.png" />
+                                <p>예약 발송</p>
+                            </div>
                         </button>
                     </div>
                 </div>
-                <hr />
-                <button>발송하기</button>
+                <hr
+                    class="w-full border-[1px] border-[#707070] opacity-30 mt-[32px] mb-[40px]"
+                />
+                <button
+                    @click="messageSubmit"
+                    class="w-full h-[66px] bg-[#4F44F0] text-center font-PretendMedium text-[22px] rounded-[8px] text-white mb-[72px]"
+                >
+                    발송하기
+                </button>
             </div>
         </div>
     </div>
 </template>
+<script>
+import axios from "axios";
+import pageNavbar from "../layout/pageNavbar.vue";
+
+export default {
+    components: {
+        pageNavbar,
+    },
+    data() {
+        return {
+            isCheck: false,
+            title: null,
+            content: null,
+        };
+    },
+    methods: {
+        isChecked() {
+            this.isCheck = !this.isCheck;
+            console.log(this.isCheck);
+        },
+        messageSubmit: async function () {
+            let msessageData = {};
+            msessageData.title = this.title;
+            msessageData.content = this.content;
+
+            const result = await axios.post(
+                "http://localhost:8000/api/message",
+                JSON.stringify(msessageData),
+                {
+                    headers: {
+                        "Content-Type": `application/json`,
+                    },
+                }
+            );
+            if (result.data.status) {
+                alert(result.data.message);
+                return;
+            }
+            alert(result.data.message);
+        },
+    },
+};
+</script>

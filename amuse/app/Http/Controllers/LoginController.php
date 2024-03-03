@@ -11,22 +11,20 @@ class LoginController extends Controller
 {
     public function check(Request $request)
     {
-
      $credentials = $request->validate([
-     'email' => ['required', 'email'],
+     'email' => ['required'],
      'password' => ['required'],
         ]);
         
         if (Auth::attempt($credentials)) 
         {
            return response()->json([ 'status' => true ,
-                                     'message' => "Success"
+                                     'message' => "로그인 성공하였습니다."
         ]);
-        }
-            return response()->json(['status' => false ,
-                                     'message' => "Fail"
-        
-        ]);
-       }
-
+    }
+    return response()->json([
+        'status' => false,
+        'message' => "로그인 실패하였습니다."
+    ]);
+}
 }

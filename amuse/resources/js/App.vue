@@ -5,7 +5,6 @@
             :fontColor="fontColor"
             class="relative z-50"
         />
-        <pageNavbar />
         <router-view></router-view>
         <pageFooter v-if="footerVisible" />
     </div>
@@ -13,14 +12,12 @@
 <script>
 import pageHeader from "./layout/pageHeader.vue";
 import pageFooter from "./layout/pageFooter.vue";
-import pageNavbar from "./layout/pageNavbar.vue";
 
 export default {
     name: "app",
     components: {
         pageHeader,
         pageFooter,
-        pageNavbar,
     },
     data() {
         return {

@@ -19,6 +19,7 @@
             <div class="w-full text-[22px] mt-[64px]">
                 <p class="font-PretendSemiBold">비밀번호</p>
                 <input
+                    type="password"
                     placeholder="비밀번호를 입력해주세요"
                     class="mt-[14px] w-full h-[61px] pl-5 pt-5 pb-5 text-[18px]"
                 />
@@ -65,9 +66,9 @@ export default {
         },
     },
     components: {
-        Logo: Logo,
-        check: check,
-        noCheck: noCheck,
+        Logo,
+        check,
+        noCheck,
     },
 };
 </script>

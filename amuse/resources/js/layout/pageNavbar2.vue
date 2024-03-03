@@ -6,22 +6,12 @@
             <button
                 class="w-[155px] h-[56px] rounded-[13px] bg-[#E1E7FD] font-PretendSemiBold text-[#4F44F0]"
             >
-                메시지 전송
+                크레딧 구매
             </button>
             <button
                 class="w-[155px] h-[56px] rounded-[13px] ml-[8px] focus:bg-[#E1E7FD] focus:font-PretendSemiBold focus:text-[#4F44F0]"
             >
-                발신번호 관리
-            </button>
-            <button
-                class="w-[155px] h-[56px] rounded-[13px] ml-[8px] focus:bg-[#E1E7FD] focus:font-PretendSemiBold focus:text-[#4F44F0]"
-            >
-                주소록 관리
-            </button>
-            <button
-                class="w-[155px] h-[56px] rounded-[13px] ml-[8px] focus:bg-[#E1E7FD] focus:font-PretendSemiBold focus:text-[#4F44F0]"
-            >
-                발송결과
+                크레딧 내역
             </button>
         </div>
     </div>

@@ -1,6 +1,6 @@
 <template>
-    <hr class="border border-[rgb(54,54,54)]" />
-    <div class="h-[996px] w-full bg-black font-PretendMedium relative">
+    <hr class="border-[1px] border-[#707070] relative z-20" />
+    <div class="h-[999px] w-full bg-black font-PretendMedium relative">
         <div class="h-full text-white ml-[13.02vw] flex items-start flex-col">
             <p class="mt-[303px] text-[24px] text-[#FCFCFC]">
                 인터넷 문자 메시지 전송의 모든 것
