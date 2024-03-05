@@ -1,11 +1,11 @@
 # amuse task
+laravel 9.x.x
+https://laravel.kr/docs/9.x/installation
 
-## 프로젝트 ver
-    laravel 9.x.x
-    https://laravel.kr/docs/9.x/installation
+Backend - laravel, laravel mix, mySQL
+Frontend - Vue.js(ver.3.x.x), TailwindCSS
 
-    Backend - laravel, laravel mix, mySQL
-    Frontend - Vue.js(ver.3.x.x), TailwindCSS
+    Libary ver
 
     "devDependencies": {
         "@popperjs/core": "^2.11.6",
