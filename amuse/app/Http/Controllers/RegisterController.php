@@ -21,9 +21,11 @@ class RegisterController extends Controller
       ]);
 
           return response()->json(['status' => true,
-                                    'message' => "Registation Success"   
+                                    'message' => "회원가입 완료"   
         
         ]);
+        return response()->json(['status' => false,
+        'message' => "회원가입 실패"]);
     }
 
 }
