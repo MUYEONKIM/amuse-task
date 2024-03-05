@@ -21022,7 +21022,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
-    Logo: _assets_svg_logo_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    logoIcon: _assets_svg_logo_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
@@ -21685,7 +21685,16 @@ var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 }, "Telegram : @shdevelope")], -1 /* HOISTED */);
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Logo = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Logo");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Logo), _hoisted_3, _hoisted_4]), _hoisted_5, _hoisted_6])]);
+  var _component_logoIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("logoIcon");
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Logo), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_logoIcon, {
+    onClick: _ctx.goHome,
+    "class": "cursor-pointer",
+    logoColor: "#EDEDED",
+    ftdotColor: "#EDEDED",
+    sqaureColor: "#BCBCBC",
+    messageColor: "#E8E8E8",
+    dotColor: "#F9FBFF"
+  }, null, 8 /* PROPS */, ["onClick"]), _hoisted_3, _hoisted_4]), _hoisted_5, _hoisted_6])]);
 }
 
 /***/ }),
@@ -21703,6 +21712,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+var _hoisted_1 = {
+  "class": "ml-[201px] flex h-full"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_logoIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("logoIcon");
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
@@ -21726,8 +21738,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     key: 1,
     onClick: $options.goHome,
     "class": "ml-[13.02vw] cursor-pointer"
-  }, null, 8 /* PROPS */, ["onClick"])), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    "class": "ml-[265.65px]",
+  }, null, 8 /* PROPS */, ["onClick"])), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    "class": "w-[192px] h-full border-[#4E43ED] border-b-2 flex items-center justify-center text-[#4E43ED]",
     to: "/message"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -21735,14 +21747,30 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     _: 1 /* STABLE */
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    "class": "ml-[136.9px]",
+    "class": "w-[192px] h-full border-[#4E43ED] border-b-2 flex items-center justify-center text-[#4E43ED]",
+    to: "/message"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("메시지")];
+    }),
+    _: 1 /* STABLE */
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    "class": "w-[192px] h-full border-[#4E43ED] border-b-2 flex items-center justify-center text-[#4E43ED]",
     to: "/credit"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("크레딧")];
     }),
     _: 1 /* STABLE */
-  })], 2 /* CLASS */);
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    "class": "w-[192px] h-full border-[#4E43ED] border-b-2 flex items-center justify-center text-[#4E43ED]",
+    to: "/credit"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("크레딧")];
+    }),
+    _: 1 /* STABLE */
+  })])], 2 /* CLASS */);
 }
 
 /***/ }),

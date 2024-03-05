@@ -3,6 +3,15 @@
         <div>
             <div class="flex flex-row text-[#D6D6D6] pt-[56px] ml-[320px]">
                 <Logo />
+                <logoIcon
+                    @click="goHome"
+                    class="cursor-pointer"
+                    :logoColor="`#EDEDED`"
+                    :ftdotColor="`#EDEDED`"
+                    :sqaureColor="`#BCBCBC`"
+                    :messageColor="`#E8E8E8`"
+                    :dotColor="`#F9FBFF`"
+                />
                 <button class="h-[44px] ml-[483px]">메시지</button>
                 <button class="h-[44px] ml-[80px]">크레딧</button>
             </div>
@@ -22,7 +31,7 @@ import logoIcon from "../assets/svg/logo.vue";
 
 export default {
     components: {
-        Logo: logoIcon,
+        logoIcon,
     },
 };
 </script>

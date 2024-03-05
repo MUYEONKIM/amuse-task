@@ -19,8 +19,28 @@
             :dotColor="`#F9FBFF`"
         />
         <logoIcon @click="goHome" class="ml-[13.02vw] cursor-pointer" v-else />
-        <router-link class="ml-[265.65px]" to="/message">메시지</router-link>
-        <router-link class="ml-[136.9px]" to="/credit">크레딧</router-link>
+        <div class="ml-[201px] flex h-full">
+            <router-link
+                class="w-[192px] h-full border-[#4E43ED] border-b-2 flex items-center justify-center text-[#4E43ED]"
+                to="/message"
+                >메시지</router-link
+            >
+            <router-link
+                class="w-[192px] h-full border-[#4E43ED] border-b-2 flex items-center justify-center text-[#4E43ED]"
+                to="/message"
+                >메시지</router-link
+            >
+            <router-link
+                class="w-[192px] h-full border-[#4E43ED] border-b-2 flex items-center justify-center text-[#4E43ED]"
+                to="/credit"
+                >크레딧</router-link
+            >
+            <router-link
+                class="w-[192px] h-full border-[#4E43ED] border-b-2 flex items-center justify-center text-[#4E43ED]"
+                to="/credit"
+                >크레딧</router-link
+            >
+        </div>
     </div>
 </template>
 <script>
