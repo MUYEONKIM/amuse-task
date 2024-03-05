@@ -25,10 +25,12 @@
 
 ## 실행방법
 >
-1. npm install
+1. cd ./amuse
 >
-2. php artisan migrate
+2. npm install
 >
-3. php artisan serve
+3. php artisan migrate
 >
-4. npm run watch 
+4. php artisan serve
+>
+5. npm run watch 
