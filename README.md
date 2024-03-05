@@ -2,11 +2,11 @@
 laravel 9.x.x
 https://laravel.kr/docs/9.x/installation
 
-Backend - laravel, laravel mix, mySQL
+Backend - laravel, lara, php, mySQL
 
 Frontend - Vue.js(ver.3.x.x), TailwindCSS
 
-    Libary ver
+## Libary ver
 
     "devDependencies": {
         "@popperjs/core": "^2.11.6",
