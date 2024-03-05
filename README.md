@@ -1,7 +1,7 @@
 # amuse task
 
-# 프로젝트 ver
-laravel 8.x.x
+## 프로젝트 ver
+    laravel 8.x.x
 
     "devDependencies": {
         "@popperjs/core": "^2.11.6",
@@ -23,7 +23,7 @@ laravel 8.x.x
         "vue-router": "^4.0.13"
     }
 
-# 실행방법
+## 실행방법
 >
 1. npm install
 >
