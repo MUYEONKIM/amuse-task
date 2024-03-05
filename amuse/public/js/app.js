@@ -21738,7 +21738,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     key: 1,
     onClick: $options.goHome,
     "class": "ml-[13.02vw] cursor-pointer"
-  }, null, 8 /* PROPS */, ["onClick"])), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  }, null, 8 /* PROPS */, ["onClick"])), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [_ctx.$route.path === '/message' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_router_link, {
+    key: 0,
     "class": "w-[192px] h-full border-[#4E43ED] border-b-2 flex items-center justify-center text-[#4E43ED]",
     to: "/message"
   }, {
@@ -21746,15 +21747,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("메시지")];
     }),
     _: 1 /* STABLE */
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    "class": "w-[192px] h-full border-[#4E43ED] border-b-2 flex items-center justify-center text-[#4E43ED]",
+  })) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_router_link, {
+    key: 1,
+    "class": "w-[192px] h-full flex items-center justify-center",
     to: "/message"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("메시지")];
     }),
     _: 1 /* STABLE */
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  })), _ctx.$route.path === '/credit' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_router_link, {
+    key: 2,
     "class": "w-[192px] h-full border-[#4E43ED] border-b-2 flex items-center justify-center text-[#4E43ED]",
     to: "/credit"
   }, {
@@ -21762,15 +21765,16 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("크레딧")];
     }),
     _: 1 /* STABLE */
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    "class": "w-[192px] h-full border-[#4E43ED] border-b-2 flex items-center justify-center text-[#4E43ED]",
+  })) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_router_link, {
+    key: 3,
+    "class": "w-[192px] h-full flex items-center justify-center",
     to: "/credit"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("크레딧")];
     }),
     _: 1 /* STABLE */
-  })])], 2 /* CLASS */);
+  }))])], 2 /* CLASS */);
 }
 
 /***/ }),
@@ -22107,7 +22111,7 @@ var _hoisted_2 = {
 var _hoisted_3 = {
   "class": "w-[1031px] flex flex-col"
 };
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<p class=\"mt-[53px] font-PretendBold text-[38px] w-full text-center\"> 메시지 전송 </p><div class=\"flex mt-[36px] w-[1031px] justify-between\"><button class=\"w-[333px] h-[66px] font-PretendMedium rounded-[8px] text-[#555555] bg-[#F5F6FA] focus:text-white focus:bg-[#4F44F0]\"> 문자 메시지 </button><button class=\"w-[333px] h-[66px] font-PretendMedium rounded-[8px] text-[#555555] bg-[#F5F6FA] focus:text-white focus:bg-[#4F44F0]\"> 알림톡 (카카오) </button><button class=\"w-[333px] h-[66px] font-PretendMedium rounded-[8px] text-[#555555] bg-[#F5F6FA] focus:text-white focus:bg-[#4F44F0]\"> 친구톡 (카카오) </button></div><div class=\"mt-[32px] text-[16px] text-[#525252] w-full\"><p> • 간편하게 한 화면에서 단문, 장문 포토메세지를 발송할 수 있습니다. </p><p> • 90byte 초과 시 장문문자로 자동 전환되며, 최대 2,000byte까지 작성이 가능합니다. </p></div><hr class=\"mt-[32px] border-1 border-[#707070] opacity-30 w-full\">", 4);
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<p class=\"mt-[53px] font-PretendBold text-[38px] w-full text-center\"> 메시지 전송 </p><div class=\"flex mt-[36px] w-[1031px] justify-between\"><button class=\"w-[333px] h-[66px] font-PretendMedium rounded-[8px] text-white bg-[#4F44F0]\"> 문자 메시지 </button><button class=\"w-[333px] h-[66px] font-PretendMedium rounded-[8px] text-[#555555] bg-[#F5F6FA] focus:text-white focus:bg-[#4F44F0]\"> 알림톡 (카카오) </button><button class=\"w-[333px] h-[66px] font-PretendMedium rounded-[8px] text-[#555555] bg-[#F5F6FA] focus:text-white focus:bg-[#4F44F0]\"> 친구톡 (카카오) </button></div><div class=\"mt-[32px] text-[16px] text-[#525252] w-full\"><p> • 간편하게 한 화면에서 단문, 장문 포토메세지를 발송할 수 있습니다. </p><p> • 90byte 초과 시 장문문자로 자동 전환되며, 최대 2,000byte까지 작성이 가능합니다. </p></div><hr class=\"mt-[32px] border-1 border-[#707070] opacity-30 w-full\">", 4);
 var _hoisted_8 = {
   "class": "flex mt-[32px] w-full justify-between"
 };

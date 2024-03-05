@@ -12,7 +12,7 @@
                 </p>
                 <div class="flex mt-[36px] w-[1031px] justify-between">
                     <button
-                        class="w-[333px] h-[66px] font-PretendMedium rounded-[8px] text-[#555555] bg-[#F5F6FA] focus:text-white focus:bg-[#4F44F0]"
+                        class="w-[333px] h-[66px] font-PretendMedium rounded-[8px] text-white bg-[#4F44F0]"
                     >
                         문자 메시지
                     </button>
