@@ -30,7 +30,7 @@
             <div
                 class="w-full flex justify-between items-center text-[18px] mt-[58px]"
             >
-                <div class="flex items-center" @click.prevent="isChecked">
+                <div class="flex items-center" @click="isChecked">
                     <noCheck v-if="!isCheck" />
                     <check v-if="isCheck" />
                     <p class="ml-[12px]">아이디 저장</p>

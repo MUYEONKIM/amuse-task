@@ -21344,42 +21344,43 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         return _regeneratorRuntime().wrap(function _callee$(_context) {
           while (1) switch (_context.prev = _context.next) {
             case 0:
+              j;
               if (!(this.userPassword !== this.confirmPassword)) {
-                _context.next = 3;
+                _context.next = 4;
                 break;
               }
               alert("입력하신 비밀번호가 다릅니다");
               return _context.abrupt("return");
-            case 3:
+            case 4:
               if (this.isCheck) {
-                _context.next = 6;
+                _context.next = 7;
                 break;
               }
               alert("약관에 동의해주셔야 가입이 완료됩니다.");
               return _context.abrupt("return");
-            case 6:
+            case 7:
               RegisterData = {};
               RegisterData.name = this.userName;
               RegisterData.email = this.userId;
               RegisterData.password = this.userPassword;
-              _context.next = 12;
+              _context.next = 13;
               return axios__WEBPACK_IMPORTED_MODULE_3___default().post("http://localhost:8000/api/register", JSON.stringify(RegisterData), {
                 headers: {
                   "Content-Type": "application/json"
                 }
               });
-            case 12:
+            case 13:
               result = _context.sent;
               if (!result.data.status) {
-                _context.next = 17;
+                _context.next = 18;
                 break;
               }
               alert(result.data.message);
               this.$router.push("/login");
               return _context.abrupt("return");
-            case 17:
-              alert(result.data.message);
             case 18:
+              alert(result.data.message);
+            case 19:
             case "end":
               return _context.stop();
           }
@@ -22010,9 +22011,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "mt-[14px] w-full h-[61px] pl-[53px] pt-5 pb-5 text-[18px]"
   }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.userPassword]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_pw)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "flex items-center",
-    onClick: _cache[2] || (_cache[2] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+    onClick: _cache[2] || (_cache[2] = function () {
       return $options.isChecked && $options.isChecked.apply($options, arguments);
-    }, ["prevent"]))
+    })
   }, [!$data.isCheck ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_noCheck, {
     key: 0
   })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.isCheck ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_check, {

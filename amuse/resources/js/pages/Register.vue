@@ -78,6 +78,7 @@ export default {
             this.isCheck = !this.isCheck;
         },
         registerSubmit: async function () {
+            j;
             if (this.userPassword !== this.confirmPassword) {
                 alert("입력하신 비밀번호가 다릅니다");
                 return;

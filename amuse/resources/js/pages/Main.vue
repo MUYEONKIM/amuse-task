@@ -27,23 +27,38 @@
         </div>
         <div class="absolute top-[140px] right-[666px]">
             <div class="bg-[#6250FF] rounded-[24px]">
-                <img src="../assets/mainPageImage/main1.png" />
+                <img
+                    src="../assets/mainPageImage/main1.png"
+                    class="object-contain"
+                />
             </div>
             <div class="bg-[#37383E] rounded-[24px] mt-[24px]">
-                <img src="../assets/mainPageImage/main2.png" />
+                <img
+                    src="../assets/mainPageImage/main2.png"
+                    class="object-contain"
+                />
             </div>
         </div>
         <div class="absolute top-[-48px] right-[380px]">
             <div class="bg-[#37383E] rounded-[24px]">
-                <img src="../assets/mainPageImage/main3.png" />
+                <img
+                    src="../assets/mainPageImage/main3.png"
+                    class="object-contain"
+                />
             </div>
             <div class="bg-[#6250FF] rounded-[24px] mt-[24px]">
-                <img src="../assets/mainPageImage/main4.png" />
+                <img
+                    src="../assets/mainPageImage/main4.png"
+                    class="object-contain"
+                />
             </div>
         </div>
         <div class="absolute top-[-302px] right-[94px]">
             <div class="bg-[#6250FF] rounded-[24px]">
-                <img src="../assets/mainPageImage/main5.png" />
+                <img
+                    src="../assets/mainPageImage/main5.png"
+                    class="object-contain"
+                />
             </div>
             <div
                 class="bg-[#37383E] rounded-[24px] mt-[24px] w-[254px] h-[609px]"
