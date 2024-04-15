@@ -9,6 +9,8 @@ Frontend - Vue.js(ver.3.x.x), TailwindCSS
 ## 배포( 정적 파일로 front 파일만 vecel을 통해 배포 하였음 )
 ### https://task-deploy-omega.vercel.app/
 
+![image](https://github.com/MUYEONKIM/amuse-task/assets/114132468/bd11368c-aa5a-4822-b222-5e3cf58e7fc1)
+
 ## Libary ver
 
     "devDependencies": {
